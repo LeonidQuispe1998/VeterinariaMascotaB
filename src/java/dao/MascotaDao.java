@@ -8,6 +8,9 @@ package dao;
 import Utilitarios.HibernateUtil;
 import entidades.Mascota;
 import interfaces.IMascota;
+import java.util.ArrayList;
+import java.util.List;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -17,7 +20,9 @@ import org.hibernate.Transaction;
  */
 public class MascotaDao implements IMascota{
 
-    public void guardarMascota(Mascota mascota) {
+  
+
+  public void guardarMascota(Mascota mascota) {
         Session sesion = HibernateUtil.getSessionFactory().openSession();
         Transaction transaccion = sesion.beginTransaction();
         
@@ -26,5 +31,33 @@ public class MascotaDao implements IMascota{
         
         sesion.close();
     }
-    
+   
+    @Override
+    public ArrayList<Mascota> listarMascota() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        ArrayList<Mascota> milista = new ArrayList<>();
+      
+        Query query = session.createQuery("FROM Mascota");
+        ArrayList<Mascota> ArrayList = null;
+        milista = (ArrayList<Mascota>) query.list();
+        return milista;
+    }
+    @Override
+    public void actualizar(Mascota mascota){
+        Session sesion = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaccion = sesion.beginTransaction();
+        sesion.update(mascota);
+        transaccion.commit();
+        sesion.close();
+        
+        
+    }
+    @Override
+    public void eliminar(Mascota mascota){
+        Session sesion = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaccion = sesion.beginTransaction();
+        sesion.delete(mascota);
+        transaccion.commit();
+        sesion.close();
+    }
 }

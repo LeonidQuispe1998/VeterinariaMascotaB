@@ -5,8 +5,8 @@
         <group>
             <file>file:/C:/Users/LEONID/Documents/NetBeansProjects/VeterinariaMascotaB/src/java/managedbean/MascotaBean.java</file>
             <file>file:/C:/Users/LEONID/Documents/NetBeansProjects/VeterinariaMascotaB/web/RegistroMascota.xhtml</file>
-            <file>file:/C:/Users/LEONID/Documents/NetBeansProjects/VeterinariaMascotaB/src/java/prueba/Ejemplo1.java</file>
-            <file>file:/C:/Users/LEONID/Documents/NetBeansProjects/VeterinariaMascotaB/web/welcomePrimefaces.xhtml</file>
+            <file>file:/C:/Users/LEONID/Documents/NetBeansProjects/VeterinariaMascotaB/src/java/interfaces/IMascota.java</file>
+            <file>file:/C:/Users/LEONID/Documents/NetBeansProjects/VeterinariaMascotaB/src/java/dao/MascotaDao.java</file>
         </group>
     </open-files>
 </project-private>

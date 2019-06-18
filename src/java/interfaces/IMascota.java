@@ -6,6 +6,8 @@
 package interfaces;
 
 import entidades.Mascota;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -14,4 +16,7 @@ import entidades.Mascota;
 public interface IMascota {
     
     public abstract void guardarMascota(Mascota masccota);
+    public abstract List<Mascota> listarMascota();
+    public abstract void actualizar(Mascota mascota);
+    public abstract void eliminar(Mascota mascota);
 }
